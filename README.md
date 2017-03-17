@@ -30,4 +30,7 @@ In other cases - current from the arduino board will be enough.
 Neat and lean examples of usage for using the arduino board by itself, and examples using the WIFI shield with it.
 
 
+
+
+
 ![Alt text](intro.jpg?raw=true "Optional Title")
