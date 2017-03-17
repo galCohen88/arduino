@@ -23,8 +23,8 @@ This shield enables the arduino operating as http server and client
 
 **Servo motor**
 
-I'm using HD-3001HB servo which is a standard servo. In cases used with WIFI shield I added 4XAA batteries as external power source. 
-In other cases - current from the arduino board will be enough.
+I'm using HD-3001HB servo which is a standard servo. In case that the servo is the only extra component connected to the arduino, power 
+supply from the board itself will be ok. In other cases such as having the WIFI shield connected, I added 4XAA batteries as external power source. 
 
 ## What is in the repo?
 Neat and lean examples of usage for using the arduino board by itself, and examples using the WIFI shield with it.
