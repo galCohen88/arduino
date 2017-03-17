@@ -31,8 +31,11 @@ Neat and lean examples of usage for using the arduino board by itself, and examp
 
 ## What is not in the repo?
 Circuit schematics. Why? because I believe you will not get the exact hardware I have
+
 Explanations about how bad the head banging might get (maybe this is a fare explanation)
 
+
+**Have fun!**
 ***
 
 ![Alt text](intro.jpg?raw=true "Optional Title")
