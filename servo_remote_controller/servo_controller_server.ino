@@ -17,8 +17,8 @@ to finish movement
 #include <SparkFunESP8266WiFi.h>
 #include<Servo.h>
 
-const char mySSID[] = "Gal_Cohen";
-const char myPSK[] = "gal301721759";
+const char mySSID[] = "WIFI";
+const char myPSK[] = "WIFIPASS";
 
 unsigned long old_time;
 unsigned long new_time;
