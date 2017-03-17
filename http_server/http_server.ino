@@ -30,9 +30,7 @@ const String httpRequest = "GET / HTTP/1.1\n"
                            "Connection: close\n\n";
 
 void setup(){
-
   Serial.begin(9600);
-
   initializeESP8266();
   connectESP8266();
   displayConnectInfo();
@@ -87,15 +85,12 @@ void displayConnectInfo(){
   Serial.print(F("My IP: ")); Serial.println(myIP);
 }
 
-
-void serverSetup()
-{
+void serverSetup(){
   server.begin();
   Serial.print(F("Server started! Go to "));
   Serial.println(esp8266.localIP());
   Serial.println();
 }
-
 
 void serverListener(){
   ESP8266Client client = server.available(500);

@@ -15,13 +15,11 @@ int poser = 1; // initial position of server (angle relatively to servo Z axis)
 
 int val; // initial variable for user input
 
-
 void setup() {
     Serial.begin(9600); // Serial comm begin at 9600bps
     ser.attach(6); // servo is connected at pin 6, but can be attached to each pin
     ser.write(poser);
 }
-
 
 void loop() {
     if (Serial.available()){
