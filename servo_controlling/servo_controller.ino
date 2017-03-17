@@ -25,7 +25,7 @@ void loop() {
     if (Serial.available()){
         val = Serial.read();// then read the serial value
         if (val == 'o'){
-                Serial.println(F("Opening"));
+            Serial.println(F("Opening"));
             ser.write(90);
             delay(2000);
             Serial.println(F("return"));
