@@ -18,7 +18,6 @@ const char myPSK[] = "WIFIPWD";
 
 ESP8266Server server = ESP8266Server(80);
 
-const char destServer[] = "example.com";
 const String htmlHeader = "HTTP/1.1 200 OK\r\n"
                           "Content-Type: text/html\r\n"
                           "Connection: close\r\n\r\n"
