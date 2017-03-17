@@ -5,16 +5,16 @@
 ## Why I started this?
 
 I heard about arduino few years ago in uni. The only thing I knew about it that it uses C as its programming language.
-The starting motive was creating a servo opening my office door.
+The motivation when started was for creating a remote controlled servo opening my office door.
 
 ## Why not raspberry pi?
 Raspberry Pi is great, but the idea of running code on another OS was not charming as running embedded code.
-(and nothing against linux - I love it, I use it by daily basis). 
+(nothing against linux - I love it, I use it by daily basis). 
 
 ## Hardware
 **Arduino board**
 
-I'm using Arduino uno r3, why did i choose this one? because it was in stock in the shop, and recommended by the community.
+I'm using Arduino uno r3. Why did i choose this model? mainly because it was in stock, and recommended by the community.
 
 **WIFI shield**
 
@@ -23,12 +23,15 @@ This shield enables the arduino operating as http server and client
 
 **Servo motor**
 
-I'm using HD-3001HB servo which is standard servo. In cases used with WIFI shield I added 4XAA batteries as external power source. 
+I'm using HD-3001HB servo which is a standard servo. In cases used with WIFI shield I added 4XAA batteries as external power source. 
 In other cases - current from the arduino board will be enough.
 
 ## What is in the repo?
 Neat and lean examples of usage for using the arduino board by itself, and examples using the WIFI shield with it.
 
+## What is not in the repo?
+Circuit schematics. Why? because I believe you will not get the exact hardware I have
+Explanations about how bad the head banging might get (maybe this is a fare explanation)
 
 ***
 
