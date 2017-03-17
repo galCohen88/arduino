@@ -5,7 +5,7 @@
 ## Why I started this?
 
 I heard about arduino few years ago in uni. The only thing I knew about it that it uses C as its programming language.
-The motivation when started was for creating a remote controlled servo opening my office door.
+The motivation when started was creating a remote controlled servo opening my office door.
 
 ## Why not raspberry pi?
 Raspberry Pi is great, but the idea of running code on another OS was not charming as running embedded code.
