@@ -25,10 +25,6 @@ const String htmlHeader = "HTTP/1.1 200 OK\r\n"
                           "<!DOCTYPE HTML>\r\n"
                           "<html>\r\n";
 
-const String httpRequest = "GET / HTTP/1.1\n"
-                           "Host: example.com\n"
-                           "Connection: close\n\n";
-
 void setup(){
   Serial.begin(9600);
   initializeESP8266();
