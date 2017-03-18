@@ -17,8 +17,16 @@ to finish movement
 #include <SparkFunESP8266WiFi.h>
 #include<Servo.h>
 
-const char mySSID[] = "WIFI";
-const char myPSK[] = "WIFIPASS";
+const char mySSID[] = "Gal_Cohen";
+const char myPSK[] = "gal301721759";
+
+const String htmlHeader = "HTTP/1.1 200 OK\r\n"
+                          "Content-Type: text/html\r\n"
+                          "Connection: close\r\n\r\n"
+                          "<!DOCTYPE HTML>\r\n"
+                          "<html>\r\n";
+
+const String responseContent = "Opening door";
 
 unsigned long old_time;
 unsigned long new_time;
@@ -102,29 +110,46 @@ void serverSetup(){
   Serial.println();
 }
 
-ESP8266Client client;
-
-void serverListener(){
-  Serial.println(F("loop"));
+void serverListener()
+{
+  ESP8266Client client = server.available(500);
   blinkSeveralTimes(1, 0);
-
-  client = server.available(1000);
-  if (client){
-    blinkSeveralTimes(1, 2000);
+  if (client)
+  {
     Serial.println(F("Client Connected!"));
-    while (client.connected()){
-      client.stop();
-      delay(10);
+    boolean currentLineIsBlank = true;
+    while (client.connected())
+    {
+      if (client.available())
+      {
+        char c = client.read();
+        if (c == '\n' && currentLineIsBlank)
+        {
+          Serial.println(F("Sending HTML page"));
+          // send a standard http response header:
+          client.print(htmlHeader);
+          String htmlBody;
+          htmlBody = responseContent;
+          client.print(htmlBody);
+          break;
+        }
+        if (c == '\n')
+        {
+          currentLineIsBlank = true;
+        }
+        else if (c != '\r')
+        {
+          currentLineIsBlank = false;
+        }
+      }
     }
-    new_time = millis();
-    Serial.println(new_time - old_time);
-    if(new_time - old_time > 5000){
-      old_time = millis();
-      openAndClose();
-    }
+    delay(1);
+    client.stop();
+    openAndClose();
+    Serial.println(F("Client disconnected"));
   }
-}
 
+}
 void openAndClose(){
     Serial.println(F("Open"));
     ser.attach(3);
@@ -132,7 +157,7 @@ void openAndClose(){
     delay(1000);
     Serial.println(F("Close"));
     ser.write(90);
-    Serial.println(F("Client disconnected. detach"));
+    Serial.println(F("detach servo"));
     delay(1000);
     ser.detach();
 }
