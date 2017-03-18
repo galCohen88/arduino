@@ -17,8 +17,8 @@ to finish movement
 #include <SparkFunESP8266WiFi.h>
 #include<Servo.h>
 
-const char mySSID[] = "Gal_Cohen";
-const char myPSK[] = "gal301721759";
+const char mySSID[] = "WIFI";
+const char myPSK[] = "WIFIPWD";
 
 const String htmlHeader = "HTTP/1.1 200 OK\r\n"
                           "Content-Type: text/html\r\n"
