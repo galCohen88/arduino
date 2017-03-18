@@ -35,7 +35,6 @@ void setup(){
   ser.write(90);
   delay(1000);
   ser.detach();
-
   old_time = millis();
   new_time = 0;
 
@@ -51,6 +50,8 @@ void loop(){
 
 void initializeESP8266(){
   int test = esp8266.begin();
+  esp8266.pinMode(5, OUTPUT);
+
   if (test != true){
     Serial.println(F("Error talking to ESP8266."));
     errorLoop(test);
@@ -105,8 +106,11 @@ ESP8266Client client;
 
 void serverListener(){
   Serial.println(F("loop"));
+  blinkSeveralTimes(1, 0);
+
   client = server.available(1000);
   if (client){
+    blinkSeveralTimes(1, 2000);
     Serial.println(F("Client Connected!"));
     while (client.connected()){
       client.stop();
@@ -138,5 +142,15 @@ void errorLoop(int error)
   Serial.print(F("Error: ")); Serial.println(error);
   Serial.println(F("Looping forever."));
   for (;;)
-    ;
+  ;
+
+}
+
+void blinkSeveralTimes(int numberOfBlinks, int delayBetweenBlinks){
+  int i = 0;
+  for(i=0; i<numberOfBlinks; i++){
+    esp8266.digitalWrite(5, HIGH);
+    esp8266.digitalWrite(5, LOW);
+    delay(delayBetweenBlinks);
+  }
 }
