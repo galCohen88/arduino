@@ -93,7 +93,7 @@ void post()
     Serial.write(client.read());
 
   if (client.connected())
-    client.stop(); 
+    client.stop();
 }
 
 
