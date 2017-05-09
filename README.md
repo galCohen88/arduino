@@ -1,6 +1,11 @@
 # Gals' Arduino Projects
 
+Servo controlled by wifi
 https://youtu.be/JGj9tMbddVU
+
+Slider potentiometer logging to sd card
+https://www.youtube.com/watch?v=WN422QPnU6o
+
 
 ###### **In the world of VMs and containers, there is something neat and beautiful in embedded code**
 
