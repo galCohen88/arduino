@@ -40,4 +40,5 @@ Explanations about how bad the head banging might get (maybe this is a fare expl
 **Have fun!**
 ***
 
-![Alt text](intro.jpg?raw=true "Optional Title")
+![Alt text](intro.jpg?raw=true "WIFI shield")
+![Alt text](sd.jpeg?raw=true "SD card recording potentiometer values")
