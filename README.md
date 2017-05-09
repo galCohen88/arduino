@@ -40,5 +40,5 @@ Explanations about how bad the head banging might get (maybe this is a fare expl
 **Have fun!**
 ***
 
-![Alt text](intro.jpg?raw=true "WIFI shield")
+![Alt text](intro.jpg?raw=true "WIFI shield controlling servo motor by http request")
 ![Alt text](sd.jpeg?raw=true "SD card recording potentiometer values")
