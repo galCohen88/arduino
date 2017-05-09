@@ -1,3 +1,15 @@
+/************************************************************
+This program is under the license of who ever wants to use it
+Created by Gal Cohen (gal.nevis@gmail.com)
+
+Connecting potentiometer
+http://henrysbench.capnfatz.com/henrys-bench/arduino-sensors-and-input/robotale-slide-potentiometer-arduino-tutorial/
+Coding the sd-card component (no level shifter in this project)
+https://learn.sparkfun.com/tutorials/microsd-shield-and-sd-breakout-hookup-guide?_ga=2.165194172.2063893433.1494286498-184119552.1488831953#sd-card-breakout-boards
+SD card Wiring diagram
+https://learn.sparkfun.com/tutorials/microsd-breakout-with-level-shifter-hookup-guide
+************************************************************/
+
 #include <SPI.h>
 #include <SD.h>
 
