@@ -47,3 +47,5 @@ Explanations about how bad the head banging might get (maybe this is a fare expl
 
 ![Alt text](intro.jpg?raw=true "WIFI shield controlling servo motor by http request")
 ![Alt text](sd.jpeg?raw=true "SD card recording potentiometer values")
+![Alt text](sd.tft?raw=true "TFT screen")
+
